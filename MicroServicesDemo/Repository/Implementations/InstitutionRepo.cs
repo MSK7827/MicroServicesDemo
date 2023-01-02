@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InstitutionApi.Repository.Implementations
 {
-    public class InstitutionRepo : IRepository<InstitutionModel>
+    public class InstitutionRepo : IInstitutionRepository
     {
         private readonly InstitutionDbContext _dbContext;
         public InstitutionRepo(InstitutionDbContext context)
@@ -40,13 +40,13 @@ namespace InstitutionApi.Repository.Implementations
 
         public InstitutionModel GetById(int Id)
         {
-            return _dbContext.Institutions.Where(x => x.InstitutionId == Id).FirstOrDefault();
+            var result = _dbContext.Institutions.Where(x =>  x.InstitutionId == Id).FirstOrDefault();
+            return result;
         }
 
         public void Update(InstitutionModel _object)
         {
-            _dbContext.Institutions.Update(_object);
-            _dbContext.SaveChanges();
+            throw new NotImplementedException();
         }
     }
 }

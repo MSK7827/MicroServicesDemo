@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateWay", "GateWay\GateWay.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitleMentApi", "EntitleMentApi\EntitleMentApi.csproj", "{4B7BEB0D-2959-4558-B520-BFC0D6336065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchestrationService", "OrchestrationService\OrchestrationService.csproj", "{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProvider", "IdentityProvider\IdentityProvider.csproj", "{08D98676-BD75-468D-8778-877CE543A439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4B7BEB0D-2959-4558-B520-BFC0D6336065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B7BEB0D-2959-4558-B520-BFC0D6336065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B7BEB0D-2959-4558-B520-BFC0D6336065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D98676-BD75-468D-8778-877CE543A439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D98676-BD75-468D-8778-877CE543A439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D98676-BD75-468D-8778-877CE543A439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D98676-BD75-468D-8778-877CE543A439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
