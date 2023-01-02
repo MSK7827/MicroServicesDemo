@@ -38,12 +38,11 @@ namespace InstitutionApi.Repository.Implementations
             }
         }
 
-        public InstitutionModel GetById(int Id)
+        public InstitutionModel GetById(string Id)
         {
-            var result = _dbContext.Institutions.Where(x =>  x.InstitutionId == Id).FirstOrDefault();
+            var result = _dbContext.Institutions.Where(x => x.InstitutionId == Id).FirstOrDefault();
             return result;
         }
-
         public void Update(InstitutionModel _object)
         {
             throw new NotImplementedException();

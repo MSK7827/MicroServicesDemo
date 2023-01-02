@@ -1,10 +1,16 @@
-﻿namespace EnvironMentApi.context
+﻿using EnvironMentApi.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace EnvironMentApi.context
 {
-    public class EnvironMentDbContext
+    public class EnvironMentDbContext : DbContext
     {
-        public EnvironMentDbContext()
+        public EnvironMentDbContext(DbContextOptions<EnvironMentDbContext> options)
+            : base(options)
         {
 
         }
+
+        public DbSet<EnviornmentModel> Enviornments { get; set; }
     }
 }

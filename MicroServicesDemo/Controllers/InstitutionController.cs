@@ -20,5 +20,45 @@ namespace InstitutionApi.Controllers
         {
             _repository = repository;
         }
-}
+
+        [HttpGet]
+        public void Get()
+        {
+            var result = _repository.GetAll();
+            if (result == null)
+            {
+                throw new Exception("no records");
+            }
+        }
+
+        [HttpGet]
+        public void GetByid(string id)
+        {
+            var result = _repository.GetById(id);
+            if (result == null)
+            {
+                throw new Exception("not found");
+            }
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public void Create([FromBody] InstitutionModel  model )
+        {
+            var result = _repository.Create(model);
+        }
+
+        [HttpPut]
+        public void Update(InstitutionModel model)
+        {
+             _repository.Update(model);
+        }
+
+        [HttpDelete]
+        public void Delete(InstitutionModel id)
+        {
+            _repository.Delete(id);
+        }
+    }
 }

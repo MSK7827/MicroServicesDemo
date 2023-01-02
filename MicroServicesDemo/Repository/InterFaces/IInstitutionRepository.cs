@@ -10,7 +10,7 @@ namespace InstitutionApi.Repository.InterFaces
 
         public IEnumerable<InstitutionModel> GetAll();
 
-        public InstitutionModel GetById(int Id);
+        public InstitutionModel GetById(string Id);
 
         public void Delete(InstitutionModel _object);
 

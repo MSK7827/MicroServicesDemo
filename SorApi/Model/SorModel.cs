@@ -2,10 +2,10 @@
 {
     public class SorModel
     {
-        public int InstitutionId { get; set; }
-        public int EnvironMentId { get; set; }
-        public int SorId { get; set; }
-        public int SorName { get; set; }
-        public int SorDescription { get; set; }
+        public string? InstitutionId { get; set; }
+        public string? EnvironMentId { get; set; }
+        public string? SorId { get; set; }
+        public string? SorName { get; set; }
+        public string? SorDescription { get; set; }
     }
 }

@@ -1,8 +1,11 @@
-﻿namespace InstitutionApi.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace InstitutionApi.Model
 {
     public class InstitutionModel
     {
-        public int InstitutionId { get; set; }
+        [Key]
+        public string? InstitutionId { get; set; }
         public string? InstitutionName { get; set;}
     }
 }

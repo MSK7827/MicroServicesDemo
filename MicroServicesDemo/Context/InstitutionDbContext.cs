@@ -7,16 +7,16 @@ namespace InstitutionApi.Context
     {
         protected readonly IConfiguration Configuration;
 
-        public InstitutionDbContext(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        //public InstitutionDbContext(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            // connect to sql server with connection string from app settings
-            options.UseSqlServer(Configuration.GetConnectionString("conn"));
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //{
+        //    // connect to sql server with connection string from app settings
+        //    options.UseSqlServer(Configuration.GetConnectionString("conn"));
+        //}
         public InstitutionDbContext(DbContextOptions<InstitutionDbContext> options)
           : base(options)
         {
