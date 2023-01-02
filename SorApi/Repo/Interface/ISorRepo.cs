@@ -12,6 +12,6 @@ namespace SorApi.Repo.Interface
 
         public Task<SorModel> GetById(string Id);
 
-        public Task<int> Delete(string id);
+        public Task<string> Delete(SorModel model);
     }
 }

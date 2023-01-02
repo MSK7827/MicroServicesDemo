@@ -18,11 +18,10 @@ namespace EnvironMentApi.Repo.Implimentations
             return result.Entity;
         }
 
-        public async Task<int> Delete(string id)
+        public Task<string> Delete(string id,EnviornmentModel model)
         {
-            var result = await _dbContext.Enviornments.Remove(id);
-            _dbContext.SaveChanges();
-            return result.Entity;
+            var result = _dbContext.Enviornments.Remove(model);
+            return Task.FromResult(result.Entity.EnvironMentId);
         }
 
         public Task<List<EnviornmentModel>> GetAll()

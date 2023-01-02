@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EnvironMentApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/institutions/{InstitutionId}/products/{ProductId}/environments/{EnvironmentId}")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class EnvironMentController : ControllerBase
     {
@@ -40,14 +41,14 @@ namespace EnvironMentApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delte(string id)
+        public IActionResult Delte(string id ,EnviornmentModel model)
         {
             var data = _environment.GetById(id);
             if (data == null)
             {
                 throw new Exception("not found");
             }
-            var result = _environment.Delete(id);
+            var result = _environment.Delete(id,model);
             return Ok(result);
         }
 

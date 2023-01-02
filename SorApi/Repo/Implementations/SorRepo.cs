@@ -18,11 +18,10 @@ namespace SorApi.Repo.Implementations
             return result.Entity;
         }
 
-        public async Task<int> Delete(string id)
+        public Task<string> Delete(SorModel model)
         {
-            var result = await _dbContext.Sors.Remove(id);
-            _dbContext.SaveChanges();
-            return result.Entity;
+            var result = _dbContext.Sors.Remove(model);
+            return Task.FromResult(result.Entity.SorId);
         }
 
         public Task<List<SorModel>> GetAll()

@@ -40,14 +40,14 @@ namespace SorApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delte(string id)
+        public IActionResult Delte(string id, SorModel model)
         {
             var data = _sorRepo.GetById(id);
             if (data == null)
             {
                 throw new Exception("not found");
             }
-            var result = _sorRepo.Delete(id);
+            var result = _sorRepo.Delete(model);
             return Ok(result);
         }
 

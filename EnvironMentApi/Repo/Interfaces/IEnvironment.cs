@@ -12,6 +12,6 @@ namespace EnvironMentApi.Repo.Interfaces
 
         public Task<EnviornmentModel> GetById(string Id);
 
-        public Task<int> Delete(string id);
+        public Task<string> Delete(string id, EnviornmentModel model);
     }
 }
