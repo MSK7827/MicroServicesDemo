@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EnvironMentApi.Controllers
 {
-    [Route("api/v1/institutions/{InstitutionId}/products/{ProductId}/environments/{EnvironmentId}")]
+    [Route("api/v1/institutions/{InstitutionId}/products/{ProductId}/environments")]
     //[Route("api/[controller]")]
     [ApiController]
     public class EnvironMentController : ControllerBase

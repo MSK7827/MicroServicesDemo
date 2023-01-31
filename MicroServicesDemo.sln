@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutionApi", "MicroServicesDemo\InstitutionApi.csproj", "{A84BDB83-9740-4A6F-81C3-577556879018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstitutionApi", "MicroServicesDemo\InstitutionApi.csproj", "{A84BDB83-9740-4A6F-81C3-577556879018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironMentApi", "EnvironMentApi\EnvironMentApi.csproj", "{E8154433-59F0-486F-BE79-DD33AAA4D1AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnvironMentApi", "EnvironMentApi\EnvironMentApi.csproj", "{E8154433-59F0-486F-BE79-DD33AAA4D1AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SorApi", "SorApi\SorApi.csproj", "{EE8F97AE-1CDF-4BA2-908B-97BC062ED092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SorApi", "SorApi\SorApi.csproj", "{EE8F97AE-1CDF-4BA2-908B-97BC062ED092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateWay", "GateWay\GateWay.csproj", "{EF0212C6-5EA3-4050-98AC-3CB1EFB71323}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GateWay", "GateWay\GateWay.csproj", "{EF0212C6-5EA3-4050-98AC-3CB1EFB71323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitleMentApi", "EntitleMentApi\EntitleMentApi.csproj", "{4B7BEB0D-2959-4558-B520-BFC0D6336065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntitleMentApi", "EntitleMentApi\EntitleMentApi.csproj", "{4B7BEB0D-2959-4558-B520-BFC0D6336065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchestrationService", "OrchestrationService\OrchestrationService.csproj", "{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchestrationService", "OrchestrationService\OrchestrationService.csproj", "{CF461B3E-A5B9-492D-BFAC-AB06ED0F3C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProvider", "IdentityProvider\IdentityProvider.csproj", "{08D98676-BD75-468D-8778-877CE543A439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider", "IdentityProvider\IdentityProvider.csproj", "{08D98676-BD75-468D-8778-877CE543A439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderService", "HeaderService\HeaderService.csproj", "{FDE0EC45-9E8D-4406-911D-7B9428BAC1AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{08D98676-BD75-468D-8778-877CE543A439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D98676-BD75-468D-8778-877CE543A439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D98676-BD75-468D-8778-877CE543A439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE0EC45-9E8D-4406-911D-7B9428BAC1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE0EC45-9E8D-4406-911D-7B9428BAC1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE0EC45-9E8D-4406-911D-7B9428BAC1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE0EC45-9E8D-4406-911D-7B9428BAC1AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

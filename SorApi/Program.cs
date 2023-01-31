@@ -9,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration; // allows both to access and to set up the config
 IWebHostEnvironment environment = builder.Environment;
 builder.Services.AddDbContext<SorDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("conn")));
+builder.Services.AddHttpClient("client", x =>
+{
+   x.DefaultRequestHeaders.Add("Accept", "application/json");
+    x.DefaultRequestHeaders.Add("Xrequest", "");
+});
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<ISorRepo, SorRepo>();
 //builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();

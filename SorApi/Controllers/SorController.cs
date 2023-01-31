@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using SorApi.Model;
 using SorApi.Repo.Interface;
+using System.Net;
 
 namespace SorApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/institutions/{InstitutionId}/environments/{EnvironmentId}/products/{ProductId}/sors")]
     [ApiController]
     public class SorController : ControllerBase
     {
@@ -16,6 +17,7 @@ namespace SorApi.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public IActionResult Get()
         {
             var result = _sorRepo.GetAll();
@@ -28,6 +30,9 @@ namespace SorApi.Controllers
         }
 
         [HttpGet("{Id}")]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType(typeof(SorModel), (int)HttpStatusCode.OK)]
         public IActionResult Get(string id)
         {
             var result = _sorRepo.GetById(id);
@@ -40,14 +45,14 @@ namespace SorApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delte(string id, SorModel model)
+        public async Task<IActionResult> Delte(string id, SorModel model)
         {
-            var data = _sorRepo.GetById(id);
+            var data = await _sorRepo.GetById(id);
             if (data == null)
             {
                 throw new Exception("not found");
             }
-            var result = _sorRepo.Delete(model);
+            var result = await _sorRepo.Delete(model);
             return Ok(result);
         }
 

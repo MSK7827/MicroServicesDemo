@@ -11,7 +11,7 @@ using System.Net;
 
 namespace InstitutionApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/products/{ProductId}/institutions")]
     [ApiController]
     public class InstitutionController : ControllerBase
     {
@@ -24,7 +24,7 @@ namespace InstitutionApi.Controllers
         [HttpGet]
         public void Get()
         {
-            var result = _repository.GetAll();
+            var result =  _repository.GetAll();
             if (result == null)
             {
                 throw new Exception("no records");
